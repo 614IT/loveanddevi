@@ -1,0 +1,6 @@
+﻿@font-face {
+  font-family: 'Molengo';
+  font-style: normal;
+  font-weight: 400;
+  src: url(s/molengo/v16/I_uuMpWeuBzZNBtQXb1alg.ttf) format('truetype');
+}

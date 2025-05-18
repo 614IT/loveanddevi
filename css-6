@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'Gentium Basic';
+  font-style: italic;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/gentiumbasic/v18/WnzjHAw9aB_JD2VGQVR80We3LAi5hBo-.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Gentium Basic';
+  font-style: italic;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/gentiumbasic/v18/WnzmHAw9aB_JD2VGQVR80We3LAixMT8uYaKJ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Gentium Basic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/gentiumbasic/v18/Wnz9HAw9aB_JD2VGQVR80We3LAOJjQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Gentium Basic';
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://fonts.gstatic.com/s/gentiumbasic/v18/WnzgHAw9aB_JD2VGQVR80We3JLasnTMeaA.ttf) format('truetype');
+}
