@@ -5,9 +5,34 @@
   "contact_email": "",
   "nav": [
     { "label": "Love", "href": "/" },
-    { "label": "Once upon a time", "href": "/once-upon-a-time/" },
-    { "label": "Retreats", "href": "/retreats/" },
-    { "label": "Peace Love and Kambo", "href": "/peace-love-and-kambo/" }
+    {
+      "label": "Once upon a time",
+      "href": "/once-upon-a-time/",
+      "children": [
+        { "label": "Positivity", "href": "/positivity/" },
+        { "label": "Earth Medicines", "href": "/earth-medicines/" },
+        { "label": "constructed thoughts", "href": "/constructed-thoughts/" },
+        { "label": "Journey into Self", "href": "/journey-into-self/" }
+      ]
+    },
+    {
+      "label": "Retreats",
+      "href": "/retreats/",
+      "children": [
+        { "label": "The Lodge", "href": "/the-lodge/" },
+        { "label": "Prices and Bookings", "href": "/prices-and-bookings/" },
+        { "label": "Retreat Testimonials", "href": "/retreat-testimonials/" },
+        { "label": "Past Retreats", "href": "/past-retreats/" }
+      ]
+    },
+    {
+      "label": "Peace Love and Kambo",
+      "href": "/peace-love-and-kambo/",
+      "children": [
+        { "label": "Kambo Practitioners", "href": "/kambo-practitioners/" },
+        { "label": "Kambo Testimonials", "href": "/kambo-testimonials/" }
+      ]
+    }
   ],
   "footer_links": [
     { "label": "Poems", "href": "/poems/" },

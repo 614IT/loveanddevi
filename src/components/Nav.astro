@@ -2,18 +2,30 @@
 import site from '../data/site.json';
 
 const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isCurrent = (href: string) => {
+  const h = href.replace(/\/$/, '') || '/';
+  return h === pathname || (h !== '/' && pathname.startsWith(h));
+};
 ---
 
 <header class="site-header">
   <div class="container">
     <a href="/" class="site-logo">{site.title}</a>
     <button class="nav-toggle" aria-label="Toggle menu" data-nav-toggle>☰</button>
-    <nav class="site-nav" data-nav>
-      {site.nav.map((item) => {
-        const href = item.href.replace(/\/$/, '') || '/';
-        const current = href === pathname || (href !== '/' && pathname.startsWith(href));
+    <nav class="site-nav" data-nav aria-label="Primary">
+      {site.nav.map((item: any) => {
+        const current = isCurrent(item.href);
         return (
-          <a href={item.href} aria-current={current ? 'page' : undefined}>{item.label}</a>
+          <div class={"nav-item" + (item.children?.length ? " has-children" : "")}>
+            <a href={item.href} aria-current={current ? 'page' : undefined}>{item.label}</a>
+            {item.children?.length ? (
+              <div class="nav-dropdown">
+                {item.children.map((c: any) => (
+                  <a href={c.href} aria-current={isCurrent(c.href) ? 'page' : undefined}>{c.label}</a>
+                ))}
+              </div>
+            ) : null}
+          </div>
         );
       })}
     </nav>

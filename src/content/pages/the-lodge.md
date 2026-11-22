@@ -1,6 +1,6 @@
 ---
 title: "The Lodge"
-hero_image: "/images/31957693-10213666968722628-4370408211870646272-n_orig.jpg"
+hero_image: "/images/134240575.jpg"
 show_in_nav: true
 nav_order: 20
 layout: default

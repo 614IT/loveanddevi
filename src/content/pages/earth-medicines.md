@@ -1,6 +1,6 @@
 ---
 title: "Earth Medicines"
-hero_image: "/images/510732-1_orig.jpg"
+hero_image: "/images/889653012.jpg"
 show_in_nav: false
 layout: default
 draft: false

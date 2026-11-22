@@ -1,5 +1,6 @@
 ---
 title: "Constructed Thoughts"
+hero_image: "/images/1393469635.jpg"
 show_in_nav: false
 layout: default
 draft: false

@@ -1,5 +1,6 @@
 ---
 title: "Prices & Bookings"
+hero_image: "/images/677145678.jpg"
 show_in_nav: true
 nav_order: 30
 layout: default

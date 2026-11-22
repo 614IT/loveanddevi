@@ -1,6 +1,6 @@
 ---
 title: "Once Upon a Time"
-hero_image: "/images/divider-graphic_3_orig.png"
+hero_image: "/images/350372012.jpg"
 show_in_nav: true
 nav_order: 5
 layout: default

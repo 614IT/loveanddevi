@@ -1,5 +1,6 @@
 ---
 title: "Journey into Self"
+hero_image: "/images/845712597.jpg"
 show_in_nav: false
 layout: default
 draft: false

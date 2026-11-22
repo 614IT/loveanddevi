@@ -1,6 +1,6 @@
 ---
 title: "Peace, Love, and Kambo"
-hero_image: "/images/50252837-370066450210426-2469682808826626048-o.jpg"
+hero_image: "/images/2054021851.jpg"
 show_in_nav: true
 nav_order: 40
 layout: default

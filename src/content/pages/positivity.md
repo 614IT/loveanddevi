@@ -1,6 +1,6 @@
 ---
 title: "Positivity"
-hero_image: "/images/21318910-10156593192404418-6200430471899027874-o.jpg"
+hero_image: "/images/1445015018.jpg"
 show_in_nav: false
 layout: default
 draft: false

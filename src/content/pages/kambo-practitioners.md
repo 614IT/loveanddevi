@@ -1,6 +1,6 @@
 ---
 title: "Kambo Practitioners"
-hero_image: "/images/29178764-221111801772559-1830944592698015498-n.jpg"
+hero_image: "/images/1843136918.jpg"
 show_in_nav: false
 layout: default
 draft: false

@@ -1,6 +1,6 @@
 ---
 title: "Retreats"
-hero_image: "/images/img-5836.jpg"
+hero_image: "/images/1715382442.jpg"
 show_in_nav: true
 nav_order: 10
 layout: default
