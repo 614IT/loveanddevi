@@ -1,7 +1,9 @@
-# Sveltia CMS config — Phase 1 placeholder
-# Phase 1: original Weebly HTML files are served verbatim from public/
-# Phase 2: per-page content extraction into CMS-editable regions (coming next)
-# Phase 3: full shop + poems + blog CMS editing
+# Sveltia CMS — form-based page editing
+# Each "page" is backed by:
+#   - src/templates/<slug>.html (preserves original Weebly layout verbatim)
+#   - src/content/pages/<slug>.md (editable fields + body HTML)
+# When saved, Astro rebuilds the page by substituting the CMS fields into
+# the template, producing a pixel-identical output.
 
 backend:
   name: github
@@ -18,13 +20,30 @@ media_folder: public/uploads/1/1/2/9/112908841
 public_folder: /uploads/1/1/2/9/112908841
 
 collections:
-  - name: readme
-    label: 'Getting started'
-    files:
-      - name: info
-        label: 'About this editor'
-        file: README.md
-        format: frontmatter
-        fields:
-          - { name: title, label: Title, widget: hidden, default: 'About the editor' }
-          - { name: body, label: 'Note', widget: text }
+  - name: pages
+    label: Pages
+    label_singular: Page
+    folder: src/content/pages
+    create: false
+    delete: false
+    extension: md
+    format: frontmatter
+    identifier_field: title
+    summary: '{{title}}'
+    preview_path: '{{slug}}.html'
+    fields:
+      - { name: title, label: 'Page title', widget: string, hint: 'Appears in the browser tab' }
+      - name: hero_image
+        label: 'Hero background image'
+        widget: image
+        hint: 'The big photo at the top of the page.'
+      - name: body_bg
+        label: 'Body background color'
+        widget: color
+        hint: 'Colour of the main content area below the hero.'
+      - name: body
+        label: 'Page content (HTML)'
+        widget: markdown
+        hint: 'The main content area. Edit text, add images, or format with the toolbar.'
+        modes: [rich_text, raw]
+        editor_components: [image]
