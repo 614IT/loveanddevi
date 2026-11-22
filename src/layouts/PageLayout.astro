@@ -6,10 +6,16 @@ interface Props {
   hero_image?: string;
   description?: string;
   layout?: 'default' | 'wide' | 'centered';
+  body_bg?: string;
+  body_text?: string;
 }
 
-const { title, hero_image, description, layout = 'default' } = Astro.props;
+const { title, hero_image, description, layout = 'default', body_bg, body_text } = Astro.props;
 const wrapClass = layout === 'wide' ? 'container' : 'prose';
+const bodyStyle = [
+  body_bg ? `background: ${body_bg};` : '',
+  body_text ? `color: ${body_text};` : '',
+].join(' ');
 ---
 
 <BaseLayout title={title} description={description} image={hero_image}>
@@ -19,7 +25,9 @@ const wrapClass = layout === 'wide' ? 'container' : 'prose';
   >
     <h1>{title}</h1>
   </section>
-  <article class={wrapClass} style="padding-top: 3rem; padding-bottom: 3rem;">
-    <slot />
-  </article>
+  <section class="page-body" style={bodyStyle}>
+    <article class={wrapClass} style="padding-top: 3rem; padding-bottom: 4rem;">
+      <slot />
+    </article>
+  </section>
 </BaseLayout>

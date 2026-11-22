@@ -1,13 +1,14 @@
 ---
 title: "Past Retreats"
-hero_image: "/images/healing-with-kambo_orig.jpg"
 show_in_nav: false
 layout: default
 draft: false
+body_bg: "#0d1c00"
+body_text: "#f5f5f5"
 ---
-| | |
+|  |  |
 | --- | --- |
-| Picture | Picture Picture |
+| Picture | Picture  Picture |
 
 [![](/images/img-8573.jpg)](/images/img-8573_orig.jpg)
 

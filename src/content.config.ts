@@ -28,6 +28,8 @@ const pages = defineCollection({
     title: z.string(),
     slug: z.string().optional(),
     hero_image: z.string().optional(),
+    body_bg: z.string().optional(),
+    body_text: z.string().optional(),
     layout: z.enum(['default', 'wide', 'centered']).default('default'),
     show_in_nav: z.boolean().default(false),
     nav_order: z.number().optional(),

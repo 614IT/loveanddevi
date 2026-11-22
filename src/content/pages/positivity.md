@@ -4,6 +4,8 @@ hero_image: "/images/1445015018.jpg"
 show_in_nav: false
 layout: default
 draft: false
+body_bg: "#72aab2"
+body_text: "#232323"
 ---
 ![Picture](/images/21318910-10156593192404418-6200430471899027874-o.jpg)
 
@@ -31,7 +33,7 @@ Puerto Miguel, Pacaya Samiria National Reserve.
 
 Santa Maria. Loreto, Peru.
 
-| | |
+|  |  |
 | --- | --- |
 | Picture | Picture |
 
@@ -44,12 +46,12 @@ Vista Alegre. Pacaya Samiria National Reserve
 Libertad, Pacaya Samaria National Reserve
 
 Love and Devi is very blessed to have the opportunity to assist many of the school children in the villages of the Amazon Rainforest with things to aid in their education. 
-A portion of proceeds from all sales, retreats and purchases go to items for school children in various villages of the Amazon in Peru. 
+A portion of proceeds from all sales, retreats and purchases go to items for school children in various villages of the Amazon in Peru.
 We encourage all of our guests to bring donations: notebooks, pencils, folders, learning materials, spanish-english dictionaries, and other school supplies- all are welcomed and appreciated. Please contact us if you have donations for this area of the world.
 
-If you would like to donate please send funds to: 
-https://paypal.me/pools/c/81eHkeXmeA 
- 
-A little goes a very long way. We thank you for your kindness. 
- 
+If you would like to donate please send funds to:
+https://paypal.me/pools/c/81eHkeXmeA
+
+A little goes a very long way. We thank you for your kindness.
+
 \*\*We encourage to visit the Amazon and bring your own donations so that you can share in person\*\* Love and light to you all.
