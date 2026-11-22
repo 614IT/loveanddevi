@@ -51,7 +51,7 @@ Happy Purging ❤
 
 ![Picture](/images/img-7473.jpg)
 
-And this is my first experience with [kambo](blog-entries/kambo-and-i-the-beginning-of-something-beautiful-lt3.html):-)
+And this is my first experience with [kambo](/blog/kambo-and-i-the-beginning-of-something-beautiful-lt3/):-)
 
 ---
 

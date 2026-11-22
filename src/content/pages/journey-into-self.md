@@ -6,30 +6,30 @@ draft: false
 ---
 **Blog Entries** 
  
-[Gayatri Mantra- translations](blog-entries/gayatri-mantra-and-its-translation.html) 
+[Gayatri Mantra- translations](/blog/gayatri-mantra-and-its-translation/) 
  
-[First Call from Ayahuasc](blog-entries/may-10th-2018.html)[a](blog-entries/may-10th-2018.html) 
+[First Call from Ayahuasc](/blog/may-10th-2018/)[a](/blog/may-10th-2018/) 
  
-[Pandit Penchan](blog-entries/the-day-i-met-pandit-penchant-aug-2017.html) 
+[Pandit Penchan](/blog/the-day-i-met-pandit-penchant-aug-2017/) 
  
-[Lost in Lima](blog-entries/lost-in-lima.html) 
+[Lost in Lima](/blog/lost-in-lima/) 
  
-[First Ayahuasca Ceremony](blog-entries/first-ceremony-with-aya.html) 
+[First Ayahuasca Ceremony](/blog/first-ceremony-with-aya/) 
  
-[Second Ayahuasca Ceremony](blog-entries/2nd-aya-and-jungle-excursion.html) 
+[Second Ayahuasca Ceremony](/blog/2nd-aya-and-jungle-excursion/) 
  
-[Kambo and I, the beginning of something beautiful](blog-entries/kambo-and-i-the-beginning-of-something-beautiful-lt3.html) 
+[Kambo and I, the beginning of something beautiful](/blog/kambo-and-i-the-beginning-of-something-beautiful-lt3/) 
  
-[A Visit With the Departed](blog-entries/a-visit-with-the-departed.html) 
+[A Visit With the Departed](/blog/a-visit-with-the-departed/) 
  
-[Meeting with Shiva](blog-entries/meeting-with-shiva.html) 
+[Meeting with Shiva](/blog/meeting-with-shiva/) 
  
-[Rabindranath Tagore and Oneness](blog-entries/rabindranath-tagore-and-the-oneness.html) 
+[Rabindranath Tagore and Oneness](/blog/rabindranath-tagore-and-the-oneness/) 
  
-[Kundalini Rising](blog-entries/kundalini-rising.html) 
+[Kundalini Rising](/blog/kundalini-rising/) 
  
-[A Recent Conversation about Plant Medicines](blog-entries/a-recent-conversation-about-plant-medicine.html) 
+[A Recent Conversation about Plant Medicines](/blog/a-recent-conversation-about-plant-medicine/) 
  
-[Fill Your Life With Honey](blog-entries/september-26th-2018.html) 
+[Fill Your Life With Honey](/blog/september-26th-2018/) 
  
-[Spending Time with Baby Aya Devi](blog-entries/spending-time-with-baby-aya-devi-lt3.html)[An Experience in the Pursuit of Life.](blog-entries/an-experience-in-the-pursuit-of-life.html)
+[Spending Time with Baby Aya Devi](/blog/spending-time-with-baby-aya-devi-lt3/)[An Experience in the Pursuit of Life.](/blog/an-experience-in-the-pursuit-of-life/)
