@@ -1,0 +1,27 @@
+---
+import site from '../data/site.json';
+
+const pathname = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="site-logo">{site.title}</a>
+    <button class="nav-toggle" aria-label="Toggle menu" data-nav-toggle>☰</button>
+    <nav class="site-nav" data-nav>
+      {site.nav.map((item) => {
+        const href = item.href.replace(/\/$/, '') || '/';
+        const current = href === pathname || (href !== '/' && pathname.startsWith(href));
+        return (
+          <a href={item.href} aria-current={current ? 'page' : undefined}>{item.label}</a>
+        );
+      })}
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector('[data-nav-toggle]');
+  const nav = document.querySelector('[data-nav]');
+  toggle?.addEventListener('click', () => nav?.classList.toggle('open'));
+</script>

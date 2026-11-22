@@ -1,0 +1,33 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+import { getCollection } from 'astro:content';
+
+const items = (await getCollection('shop'))
+  .sort((a, b) => a.data.order - b.data.order);
+---
+
+<PageLayout title="Shop" layout="wide">
+  {items.length === 0 ? (
+    <p style="text-align:center;">Shop items coming soon.</p>
+  ) : (
+    <div class="shop-grid">
+      {items.map((item) => (
+        <article class:list={["shop-item", item.data.sold_out && "sold-out"]}>
+          {item.data.image && <div class="shop-image"><img src={item.data.image} alt={item.data.title} /></div>}
+          <div class="shop-body">
+            <h3>{item.data.title}</h3>
+            <div class="price">{item.data.price}</div>
+            <a
+              href={item.data.sold_out ? '#' : item.data.stripe_link}
+              class="btn"
+              target={item.data.sold_out ? undefined : '_blank'}
+              rel="noopener"
+            >
+              {item.data.sold_out ? 'Sold out' : 'Buy now'}
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  )}
+</PageLayout>

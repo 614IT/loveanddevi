@@ -1,0 +1,23 @@
+---
+import BaseLayout from './BaseLayout.astro';
+
+interface Props {
+  title: string;
+  hero_image?: string;
+  description?: string;
+  layout?: 'default' | 'wide' | 'centered';
+}
+
+const { title, hero_image, description, layout = 'default' } = Astro.props;
+const bannerStyle = hero_image ? `background-image: url('${hero_image}')` : undefined;
+const wrapClass = layout === 'wide' ? 'container' : 'prose';
+---
+
+<BaseLayout title={title} description={description} image={hero_image}>
+  <section class="page-banner" style={bannerStyle}>
+    <h1>{title}</h1>
+  </section>
+  <article class={wrapClass} style="padding-top: 3rem; padding-bottom: 3rem;">
+    <slot />
+  </article>
+</BaseLayout>

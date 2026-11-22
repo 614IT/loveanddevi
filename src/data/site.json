@@ -1,0 +1,25 @@
+{
+  "title": "Love and Devi",
+  "tagline": "written thoughts, emotions, and the journey into self",
+  "author": "Natasha Devi",
+  "contact_email": "",
+  "nav": [
+    { "label": "Home", "href": "/" },
+    { "label": "Poems", "href": "/poems/" },
+    { "label": "Blog", "href": "/blog/" },
+    { "label": "Retreats", "href": "/retreats/" },
+    { "label": "Shop", "href": "/shop/" },
+    { "label": "About", "href": "/about/" }
+  ],
+  "footer_links": [
+    { "label": "Contact", "href": "/contact/" }
+  ],
+  "colors": {
+    "primary": "#608e1e",
+    "primary_dark": "#167255",
+    "accent": "#ebe941",
+    "muted": "#d5d5d5",
+    "text": "#2b2b2b",
+    "bg": "#fafaf5"
+  }
+}
