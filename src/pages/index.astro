@@ -18,10 +18,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 
 <BaseLayout image={heroImage}>
   <section class="hero" style={heroImage ? `background-image: url('${heroImage}');` : undefined}>
-    <div>
-      <h1>{site.title}</h1>
-      <p class="tagline">{site.tagline}</p>
-    </div>
+    <p class="tagline">{site.tagline}</p>
   </section>
 
   {HomeContent && (

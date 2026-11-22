@@ -1,25 +1,27 @@
 {
   "title": "Love and Devi",
-  "tagline": "More love, magnitude, and inspired years always.",
+  "tagline": "May love encapsulate and surround you, always.",
   "author": "Natasha Devi",
   "contact_email": "",
   "nav": [
-    { "label": "Home", "href": "/" },
-    { "label": "Poems", "href": "/poems/" },
-    { "label": "Blog", "href": "/blog/" },
+    { "label": "Love", "href": "/" },
+    { "label": "Once upon a time", "href": "/once-upon-a-time/" },
     { "label": "Retreats", "href": "/retreats/" },
-    { "label": "Shop", "href": "/shop/" },
-    { "label": "About", "href": "/about/" }
+    { "label": "Peace Love and Kambo", "href": "/peace-love-and-kambo/" }
   ],
   "footer_links": [
-    { "label": "Contact", "href": "/contact/" }
+    { "label": "Poems", "href": "/poems/" },
+    { "label": "Blog", "href": "/blog/" },
+    { "label": "Shop", "href": "/shop/" }
   ],
+  "social": {
+    "facebook": "https://web.facebook.com/loveanddevi/",
+    "instagram": "https://instagram.com/loveanddevi",
+    "email": ""
+  },
   "colors": {
-    "primary": "#608e1e",
-    "primary_dark": "#167255",
-    "accent": "#ebe941",
-    "muted": "#d5d5d5",
-    "text": "#2b2b2b",
-    "bg": "#fafaf5"
+    "bg": "#232323",
+    "text": "#666666",
+    "accent": "#e8c87a"
   }
 }
