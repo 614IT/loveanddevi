@@ -17,9 +17,11 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
 ---
 
 <BaseLayout image={heroImage}>
-  <section class="hero" style={heroImage ? `background-image: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.95)), url('${heroImage}'); background-size: cover; background-position: center;` : undefined}>
-    <h1>{site.title}</h1>
-    <p class="tagline">{site.tagline}</p>
+  <section class="hero" style={heroImage ? `background-image: url('${heroImage}');` : undefined}>
+    <div>
+      <h1>{site.title}</h1>
+      <p class="tagline">{site.tagline}</p>
+    </div>
   </section>
 
   {HomeContent && (

@@ -1,7 +1,7 @@
 ---
 title: "Love"
 slug: "home"
-hero_image: "/images/florida_orig.jpeg"
+hero_image: "/images/607820780.jpg"
 show_in_nav: false
 layout: default
 draft: false
