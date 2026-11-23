@@ -10,8 +10,6 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^14.4.9",
-    "@astrojs/node": "^11.1.14",
     "@tinacms/astro": "^0.8.0",
     "astro": "^7.4.13",
     "marked": "^18.2.1",
