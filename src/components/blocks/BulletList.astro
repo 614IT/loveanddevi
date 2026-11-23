@@ -1,0 +1,13 @@
+---
+import { tinaField } from '@tinacms/astro/tina-field';
+
+interface Props { block: any; }
+const { block } = Astro.props;
+const items = block.items || [];
+---
+
+<div class="paragraph" data-tina-field={tinaField(block, 'items')}>
+  <ul>
+    {items.map((item: string) => <li>{item}</li>)}
+  </ul>
+</div>

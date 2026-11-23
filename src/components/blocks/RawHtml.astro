@@ -1,0 +1,8 @@
+---
+import { tinaField } from '@tinacms/astro/tina-field';
+
+interface Props { block: any; }
+const { block } = Astro.props;
+---
+
+<div data-tina-field={tinaField(block, 'html')} set:html={block.html || ''} />

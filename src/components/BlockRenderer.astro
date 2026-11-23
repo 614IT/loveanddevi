@@ -1,0 +1,40 @@
+---
+import Paragraph from './blocks/Paragraph.astro';
+import Heading from './blocks/Heading.astro';
+import Image from './blocks/Image.astro';
+import BulletList from './blocks/BulletList.astro';
+import TwoColumn from './blocks/TwoColumn.astro';
+import Divider from './blocks/Divider.astro';
+import RawHtml from './blocks/RawHtml.astro';
+
+interface Props {
+  blocks: any[];
+}
+
+const { blocks = [] } = Astro.props;
+
+// Map block.__typename (TinaCMS convention) -> component
+const componentMap: Record<string, any> = {
+  PageBlocksParagraph: Paragraph,
+  PageBlocksHeading: Heading,
+  PageBlocksImage: Image,
+  PageBlocksBulletList: BulletList,
+  PageBlocksTwoColumn: TwoColumn,
+  PageBlocksDivider: Divider,
+  PageBlocksRawHtml: RawHtml,
+  // Also accept block.type as fallback
+  paragraph: Paragraph,
+  heading: Heading,
+  image: Image,
+  bulletList: BulletList,
+  twoColumn: TwoColumn,
+  divider: Divider,
+  rawHtml: RawHtml,
+};
+---
+
+{blocks.map((block) => {
+  const Component = componentMap[block.__typename] || componentMap[block._template];
+  if (!Component) return null;
+  return <Component block={block} />;
+})}

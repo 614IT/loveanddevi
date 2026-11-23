@@ -1,0 +1,24 @@
+---
+import { TinaMarkdown } from '@tinacms/astro/TinaMarkdown.astro';
+import { tinaField } from '@tinacms/astro/tina-field';
+
+interface Props { block: any; }
+const { block } = Astro.props;
+---
+
+<div class="wsite-multicol">
+  <div class="wsite-multicol-table-wrap" style="margin:0 -15px;">
+    <table class="wsite-multicol-table">
+      <tbody class="wsite-multicol-tbody">
+        <tr class="wsite-multicol-tr">
+          <td class="wsite-multicol-col" style="width:50%;padding:0 15px;vertical-align:top;" data-tina-field={tinaField(block, 'left')}>
+            <TinaMarkdown content={block.left} />
+          </td>
+          <td class="wsite-multicol-col" style="width:50%;padding:0 15px;vertical-align:top;" data-tina-field={tinaField(block, 'right')}>
+            <TinaMarkdown content={block.right} />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
