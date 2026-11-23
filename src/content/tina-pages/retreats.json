@@ -1,7 +1,7 @@
 {
-  "title": "Retreats",
+  "title": "Retreats (TEST EDIT)",
   "hero_image": "/uploads/1/1/2/9/112908841/background-images/1715382442.jpg",
-  "body_bg": "#db82bf",
+  "body_bg": "#00ff00",
   "blocks": [
     {
       "_template": "rawHtml",
