@@ -1,0 +1,11 @@
+{
+  "title": "Home",
+  "hero_image": "/uploads/1/1/2/9/112908841/background-images/607820780.jpg",
+  "body_bg": "#608e1e",
+  "blocks": [
+    {
+      "_template": "rawHtml",
+      "html": "\n\t\t<div class=\"wsite-section-content\">\n          <div class=\"container\">\n\t\t\t<div class=\"wsite-section-elements\">\n\t\t\t\t<div class=\"paragraph\" style=\"text-align:center;\"><strong><font color=\"#f8eaa9\">A site sharing my personal adventures, knowledge and invitation to connect deeply with our magical Mother Earth &lt;3</font></strong></div>\n\n<div><div class=\"wsite-image wsite-image-border-none \" style=\"padding-top:10px;padding-bottom:10px;margin-left:0;margin-right:0;text-align:center\">\n<a>\n<img src=\"uploads/1/1/2/9/112908841/florida_orig.jpeg\" alt=\"Picture\" style=\"width:auto;max-width:100%\">\n</a>\n<div style=\"display:block;font-size:90%\"></div>\n</div></div>\n\n<div class=\"paragraph\" style=\"text-align:center;\"><br><br><font color=\"#f8c7a9\">Namaste.&nbsp;&hearts;<br><br>Love and Devi&nbsp;&#9996;</font><br><br><strong><font color=\"#e9cf76\"><a href=\"cdn-cgi/l/email-protection.html\" class=\"__cf_email__\" data-cfemail=\"274b4851424649434342514e67404a464e4b0944484a\">[email&#160;protected]</a></font></strong></div>\n\t\t\t</div>\n\t\t</div>\n      </div>\n\n\t"
+    }
+  ]
+}
