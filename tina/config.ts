@@ -7,7 +7,7 @@ const paragraphBlock = {
   name: 'paragraph',
   label: 'Paragraph (text)',
   ui: {
-    defaultItem: { body: 'New paragraph. Click to edit.' },
+    defaultItem: { body: 'New paragraph. Click to edit.', align: 'left' },
   },
   fields: [
     {
@@ -15,6 +15,22 @@ const paragraphBlock = {
       name: 'body',
       label: 'Text',
       isBody: false,
+    },
+    {
+      type: 'string',
+      name: 'align',
+      label: 'Alignment',
+      options: [
+        { label: 'Left', value: 'left' },
+        { label: 'Center', value: 'center' },
+        { label: 'Right', value: 'right' },
+      ],
+    },
+    {
+      type: 'string',
+      name: 'color',
+      label: 'Text colour (optional)',
+      ui: { component: 'color' },
     },
   ],
 };

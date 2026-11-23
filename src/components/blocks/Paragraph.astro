@@ -1,16 +1,44 @@
 ---
-import { TinaMarkdown } from '@tinacms/astro/TinaMarkdown.astro';
+import { marked } from 'marked';
 import { tinaField } from '@tinacms/astro/tina-field';
 
 interface Props {
   block: any;
   index: number;
-  parentField?: string;
 }
 
-const { block, index, parentField = 'blocks' } = Astro.props;
+const { block, index } = Astro.props;
+const align = block.align || 'left';
+const color = block.color || '';
+const style = `text-align:${align};` + (color ? `color:${color};` : '');
+
+// block.body may be either:
+//   - a plain string (markdown)
+//   - a Tina rich-text AST object { type: 'root', children: [...] }
+// Convert either to HTML string for rendering.
+let bodyHtml = '';
+if (typeof block.body === 'string') {
+  bodyHtml = await marked.parse(block.body, { breaks: true });
+} else if (block.body && typeof block.body === 'object') {
+  // Rich-text AST — attempt to flatten children to plain text; for a POC we
+  // handle the common case of root -> paragraph -> text.
+  const walk = (node: any): string => {
+    if (!node) return '';
+    if (typeof node === 'string') return node;
+    if (Array.isArray(node)) return node.map(walk).join('');
+    if (node.text) return node.text;
+    if (node.children) return walk(node.children);
+    return '';
+  };
+  bodyHtml = await marked.parse(walk(block.body), { breaks: true });
+}
+
+const field = tinaField(block, 'body') || undefined;
 ---
 
-<div class="paragraph" data-tina-field={tinaField(block, 'body')}>
-  <TinaMarkdown content={block.body} />
-</div>
+<div
+  class="paragraph"
+  style={style}
+  data-tina-field={field}
+  set:html={bodyHtml}
+/>

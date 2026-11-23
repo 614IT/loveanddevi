@@ -1,0 +1,24 @@
+---
+import template from '../templates/index.html?raw';
+import pageData from '../content/tina-pages/index.json';
+import BlockRenderer from '../components/BlockRenderer.astro';
+
+export const prerender = true;
+
+// Substitute the chrome fields (title/hero/body_bg) into the template,
+// then split at the body_html marker so we can render structured blocks
+// as real Astro components (enables Tina visual click-to-edit).
+let chrome = template as string;
+chrome = chrome.replace(/<!--CMS:title-->[\s\S]*?<!--\/CMS:title-->/, pageData.title);
+if (pageData.hero_image) {
+  chrome = chrome.replace(/<!--CMS:hero_image-->[\s\S]*?<!--\/CMS:hero_image-->/, pageData.hero_image);
+}
+if (pageData.body_bg) {
+  chrome = chrome.replace(/<!--CMS:body_bg-->[\s\S]*?<!--\/CMS:body_bg-->/, pageData.body_bg);
+}
+const [beforeBody, afterBody] = chrome.split(/<!--CMS:body_html-->[\s\S]*?<!--\/CMS:body_html-->/);
+---
+
+<Fragment set:html={beforeBody} />
+<BlockRenderer blocks={pageData.blocks} />
+<Fragment set:html={afterBody ?? ''} />
