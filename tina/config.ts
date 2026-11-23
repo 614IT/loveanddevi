@@ -154,7 +154,7 @@ export default defineConfig({
         path: 'src/content/tina-pages',
         format: 'json',
         ui: {
-          router: ({ document }) => `/${document._sys.filename}.html`,
+          router: ({ document }) => `/${document._sys.filename}`,
         },
         fields: [
           { type: 'string', name: 'title', label: 'Page title', isTitle: true, required: true },
