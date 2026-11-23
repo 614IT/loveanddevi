@@ -1,0 +1,33 @@
+# Weebly exported some CSS files without a .css extension (css-1 … css-14).
+# Cloudflare Pages defaults their Content-Type to application/octet-stream,
+# which modern browsers refuse to apply as stylesheets under strict MIME
+# checking. Force the correct MIME so the original fonts/typography load.
+
+/css-1
+  Content-Type: text/css; charset=utf-8
+/css-2
+  Content-Type: text/css; charset=utf-8
+/css-3
+  Content-Type: text/css; charset=utf-8
+/css-4
+  Content-Type: text/css; charset=utf-8
+/css-5
+  Content-Type: text/css; charset=utf-8
+/css-6
+  Content-Type: text/css; charset=utf-8
+/css-7
+  Content-Type: text/css; charset=utf-8
+/css-8
+  Content-Type: text/css; charset=utf-8
+/css-9
+  Content-Type: text/css; charset=utf-8
+/css-10
+  Content-Type: text/css; charset=utf-8
+/css-11
+  Content-Type: text/css; charset=utf-8
+/css-12
+  Content-Type: text/css; charset=utf-8
+/css-13
+  Content-Type: text/css; charset=utf-8
+/css-14
+  Content-Type: text/css; charset=utf-8
