@@ -1,8 +1,39 @@
+# Dependencies
 node_modules/
+
+# Build output
 dist/
+
+# Astro
 .astro/
-.DS_Store
-npm-debug.log*
-.env
-.env.local
+.emdash/migrations.json
+
+# Data
+data.db
+data.db-*
+uploads/
 .wrangler/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Wrangler local secrets
+.dev.vars
+.dev.vars.*
+
+# IDE
+.vscode/*
+!.vscode/mcp.json
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
