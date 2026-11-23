@@ -5,11 +5,12 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "tinacms build && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/cloudflare": "^14.4.9",
     "@astrojs/node": "^11.1.14",
     "@tinacms/astro": "^0.8.0",
     "astro": "^7.4.13",
