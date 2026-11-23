@@ -9,7 +9,7 @@ backend:
   name: github
   repo: 614IT/loveanddevi
   branch: main
-  base_url: https://loveanddevi-auth.s0mnium01.workers.dev
+  base_url: https://loveanddevi-cms-auth.s0mnium01.workers.dev
   auth_endpoint: oauth/authorize
 
 site_url: https://loveanddevi.pages.dev

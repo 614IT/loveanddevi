@@ -1,4 +1,4 @@
-name = "loveanddevi-auth"
+name = "loveanddevi-cms-auth"
 main = "src/worker.js"
 compatibility_date = "2024-11-01"
 
