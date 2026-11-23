@@ -1,0 +1,35 @@
+fragment PageParts on Page {
+  __typename
+  title
+  hero_image
+  body_bg
+  blocks {
+    __typename
+    ... on PageBlocksParagraph {
+      body
+    }
+    ... on PageBlocksHeading {
+      text
+      level
+    }
+    ... on PageBlocksImage {
+      src
+      alt
+      align
+      caption
+    }
+    ... on PageBlocksBulletList {
+      items
+    }
+    ... on PageBlocksTwoColumn {
+      left
+      right
+    }
+    ... on PageBlocksDivider {
+      style
+    }
+    ... on PageBlocksRawHtml {
+      html
+    }
+  }
+}
