@@ -8,7 +8,7 @@
 backend:
   name: github
   repo: 614IT/loveanddevi
-  branch: main
+  branch: revamp/astro-cms
   base_url: https://loveanddevi-auth.s0mnium01.workers.dev
   auth_endpoint: oauth/authorize
 
