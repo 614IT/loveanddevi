@@ -8,25 +8,28 @@ import { EmVBMenuRuntime } from "@perkyzz/emvb/astro/menu";
 import { EmVBTabsRuntime } from "@perkyzz/emvb/astro/tabs";
 import { heroSeoDefaults } from "../utils/page";
 
-// Try EmVB first — if this URL is backed by an EmVB-built page, render it
+// Try EmVB first. If this URL has an EmVB page, render it below.
 const emvb = await resolveEmVBPage(Astro);
-if (emvb) {
-	return Astro.respond(null);  // EmVBPage handles rendering below
+
+// Fall back to EmDash page collection
+const slug = decodeSlug(Astro.params.slug);
+const emdashEntry = slug ? await getEmDashEntry("pages", slug) : null;
+
+// If neither match, 404
+if (!emvb && !emdashEntry?.entry) {
+	return Astro.rewrite("/404");
 }
 
-const slug = decodeSlug(Astro.params.slug);
-if (!slug) return Astro.rewrite("/404");
+const page = emdashEntry?.entry;
+if (page && Astro.cache?.enabled) Astro.cache.set(emdashEntry.cacheHint);
 
-const { entry: page, cacheHint } = await getEmDashEntry("pages", slug);
-if (!page) return Astro.rewrite("/404");
-
-if (Astro.cache?.enabled) Astro.cache.set(cacheHint);
-
-const seo = getSeoMeta(page, {
-	siteUrl: Astro.url.origin,
-	path: `/${page.id}`,
-	...heroSeoDefaults(page.data.content, Astro.url.origin),
-});
+const seo = page
+	? getSeoMeta(page, {
+		siteUrl: Astro.url.origin,
+		path: `/${page.id}`,
+		...heroSeoDefaults(page.data.content, Astro.url.origin),
+	})
+	: null;
 ---
 
 {emvb ? (
@@ -35,7 +38,7 @@ const seo = getSeoMeta(page, {
 		{emvb.needsTabsRuntime && <EmVBTabsRuntime />}
 		{emvb.needsMenuRuntime && <EmVBMenuRuntime />}
 	</EmVBPage>
-) : (
+) : page && seo && (
 	<Base
 		title={seo.title}
 		pageTitle={page.data.title}

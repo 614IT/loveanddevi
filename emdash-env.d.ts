@@ -5,6 +5,39 @@
 
 import type { BylineSummary, ContentBylineCredit, TaxonomyTerm, PortableTextBlock } from "emdash";
 
+export interface EmvbPage {
+  id: string;
+  slug: string | null;
+  status: string;
+  title: string;
+  layout?: unknown;
+  canvas_mode?: "site-layout" | "blank";
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date | null;
+  byline?: BylineSummary | null;
+  bylines?: ContentBylineCredit[];
+  terms?: Record<string, TaxonomyTerm[]>;
+}
+
+export interface EmvbThemePart {
+  id: string;
+  slug: string | null;
+  status: string;
+  title: string;
+  layout?: unknown;
+  part_type: "header" | "footer" | "error_404" | "search_results" | "single_page" | "single_post" | "archive" | "loop_item" | "section" | "page_template" | "popup" | "float";
+  conditions?: unknown;
+  triggers?: unknown;
+  float?: unknown;
+  createdAt: Date;
+  updatedAt: Date;
+  publishedAt: Date | null;
+  byline?: BylineSummary | null;
+  bylines?: ContentBylineCredit[];
+  terms?: Record<string, TaxonomyTerm[]>;
+}
+
 export interface PageContentMarketingHeroV1Block {
   _type: "marketing_hero";
   _version: 1;
@@ -171,6 +204,8 @@ export interface Page {
 
 declare module "emdash" {
   interface EmDashCollections {
+    emvb_pages: EmvbPage;
+    emvb_theme_parts: EmvbThemePart;
     pages: Page;
   }
 }
