@@ -1,7 +1,7 @@
 ---
 title: "Retreats"
 hero_image: "/uploads/1/1/2/9/112908841/background-images/1715382442.jpg"
-body_bg: "#00ff00"
+body_bg: "#db82bf"
 ---
 
 		<div class="wsite-section-content">
