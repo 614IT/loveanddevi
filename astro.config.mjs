@@ -4,6 +4,7 @@ import { d1, r2 } from "@emdash-cms/cloudflare";
 import icon from "astro-iconset";
 import { defineConfig, fontProviders } from "astro/config";
 import emdash from "emdash/astro";
+import { emvb } from "@perkyzz/emvb";
 import { Features } from "lightningcss";
 
 export default defineConfig({
@@ -81,6 +82,7 @@ export default defineConfig({
 		emdash({
 			database: d1({ binding: "DB", session: "auto", coalesce: true }),
 			storage: r2({ binding: "MEDIA" }),
+			plugins: [emvb()],
 		}),
 	],
 	fonts: [

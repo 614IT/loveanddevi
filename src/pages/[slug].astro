@@ -2,7 +2,17 @@
 import { decodeSlug, getEmDashEntry, getSeoMeta } from "emdash";
 import Base from "../layouts/Base.astro";
 import PageView from "../components/PageView.astro";
+import { EmVBPage, resolveEmVBPage } from "@perkyzz/emvb/astro";
+import { EmVBFormsRuntime } from "@perkyzz/emvb/astro/forms";
+import { EmVBMenuRuntime } from "@perkyzz/emvb/astro/menu";
+import { EmVBTabsRuntime } from "@perkyzz/emvb/astro/tabs";
 import { heroSeoDefaults } from "../utils/page";
+
+// Try EmVB first — if this URL is backed by an EmVB-built page, render it
+const emvb = await resolveEmVBPage(Astro);
+if (emvb) {
+	return Astro.respond(null);  // EmVBPage handles rendering below
+}
 
 const slug = decodeSlug(Astro.params.slug);
 if (!slug) return Astro.rewrite("/404");
@@ -19,14 +29,22 @@ const seo = getSeoMeta(page, {
 });
 ---
 
-<Base
-	title={seo.title}
-	pageTitle={page.data.title}
-	description={seo.description}
-	image={seo.ogImage}
-	canonical={seo.canonical}
-	robots={seo.robots}
-	content={{ collection: "pages", id: page.data.id, slug: page.id }}
->
-	<PageView page={page} />
-</Base>
+{emvb ? (
+	<EmVBPage page={emvb}>
+		{emvb.needsFormsRuntime && <EmVBFormsRuntime />}
+		{emvb.needsTabsRuntime && <EmVBTabsRuntime />}
+		{emvb.needsMenuRuntime && <EmVBMenuRuntime />}
+	</EmVBPage>
+) : (
+	<Base
+		title={seo.title}
+		pageTitle={page.data.title}
+		description={seo.description}
+		image={seo.ogImage}
+		canonical={seo.canonical}
+		robots={seo.robots}
+		content={{ collection: "pages", id: page.data.id, slug: page.id }}
+	>
+		<PageView page={page} />
+	</Base>
+)}
