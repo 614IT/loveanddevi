@@ -8,6 +8,7 @@
 
 const ALLOWED_ORIGINS = [
   'https://loveanddevi.pages.dev',
+  'https://revamp-astro-cms.loveanddevi.pages.dev',
   'https://loveanddevi.com',
   'https://www.loveanddevi.com',
 ];
